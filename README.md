@@ -48,7 +48,9 @@ make live
 
 Perintah ini melakukan cross-compile untuk **Linux ARM64** (`GOOS=linux`, `GOARCH=arm64`, `CGO_ENABLED=0`) dan membuat `app.zip` di direktori proyek. File ZIP berisi binary `app` yang dapat dieksekusi; `app.zip` yang sudah ada akan ditimpa. Koneksi internet mungkin diperlukan saat Go pertama kali mengunduh dependensi.
 
-Salin `app.zip` ke mesin Linux ARM64, kemudian jalankan:
+Untuk deployment di SewuCloud, unggah `app.zip` melalui antarmuka SewuCloud sesuai petunjuk deployment layanan Anda. Pastikan layanan menggunakan Linux ARM64 dan menjalankan binary `app` pada port `3000`.
+
+Jika menjalankan secara manual pada mesin Linux ARM64, salin `app.zip` ke mesin tersebut, kemudian jalankan:
 
 ```sh
 unzip app.zip
